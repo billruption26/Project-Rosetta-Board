@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.whl
+github_export/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Local SQLite & Databases
+*.db
+*.sqlite
+*.sqlite3
+rosetta_board_local.db
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Local logs & Agent CLI runtime
+*.log
+.google-agents-cli/
+
+# Storyboard outputs & transient data (keep directory structure with .gitkeep)
+outputs/*
+!outputs/.gitkeep
+
+# IDE and OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

@@ -1,0 +1,10 @@
+name: project-rosetta-board
+agent_directory: app
+base_template: adk
+deployment_target: none
+session_type: in_memory
+cicd_runner: skip
+region: us-east1
+language: python
+acli_version: 1.5.0
+agent_guidance_filename: GEMINI.md

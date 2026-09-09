@@ -1,0 +1,14 @@
+# ADK Evaluation Configuration for Project Rosetta Board
+eval_sets:
+  - name: storyboard_ingestion_and_normalization
+    dataset: tests/eval/datasets/storyboard_eval.json
+    criteria:
+      - name: taxonomy_normalization_accuracy
+        description: "Evaluates whether freelance shorthand is mapped to master studio nomenclature with >= 85% accuracy."
+        threshold: 0.85
+      - name: visual_prop_inference
+        description: "Evaluates whether visually implied props are extracted from sketches."
+        threshold: 0.80
+      - name: revision_alert_generation
+        description: "Evaluates whether delta checks identify newly required props and framing updates."
+        threshold: 0.90

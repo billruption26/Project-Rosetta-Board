@@ -1,0 +1,34 @@
+[
+  {
+    "eval_id": "eval_01_ingest_scene_42_v1",
+    "prompt": "Ingest storyboard file app/data/sample_storyboards/Scene_42_V1.pdf for Scene 42 Version v1.",
+    "expected_tool": "ingest_storyboard_file",
+    "ground_truth": {
+      "scene": "42",
+      "version": "v1",
+      "minimum_panels": 3,
+      "expected_implied_props": ["Coffee Cup"],
+      "expected_normalized_framing": ["High Angle", "Medium Close Up", "Extreme Close Up", "Dutch Angle", "Wide Shot"]
+    }
+  },
+  {
+    "eval_id": "eval_02_revision_diff_check",
+    "prompt": "Compare Scene 42 v1 against v2 and generate 1st AD alerts.",
+    "expected_tool": "check_revision_deltas",
+    "ground_truth": {
+      "scene": "42",
+      "old_version": "v1",
+      "new_version": "v2",
+      "expected_alerts_contain": ["prop gun", "Close Up"]
+    }
+  },
+  {
+    "eval_id": "eval_03_prop_rental_lookup",
+    "prompt": "What is the estimated daily rental cost and availability of a 1967 Mustang picture vehicle for Scene 42?",
+    "expected_tool": "lookup_prop_intelligence",
+    "ground_truth": {
+      "category": "Picture Vehicle",
+      "vendor": "Cinema Picture Cars Hollywood"
+    }
+  }
+]
